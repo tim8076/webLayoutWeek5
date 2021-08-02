@@ -1,0 +1,58 @@
+
+.btn{
+    font-family: inherit;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    color: $color-light;
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    &--primary{
+        background-color: $color-primary;
+    }
+    &--outline--primary{
+        background-color: transparent;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        &:hover{
+            background-color: $color-primary;
+            color: $color-light;
+        }
+    }
+    &--danger{
+        border: 1px solid $color-danger;
+        color: $color-danger;
+        background-color: $color-light;
+        &:hover{
+            background-color: $color-danger;
+            color: $color-light;
+        }
+    }
+    &--gray{
+        border: 1px solid $color-gray-400;
+        color: $color-primary;
+        background-color: $color-light;
+    }
+    &--disabled{
+        border: 1px solid $color-gray-400;
+        color: $color-gray-400;
+        pointer-events: none;
+        background-color: $color-light;
+    }
+
+    &--full{
+       padding: 1rem 0;
+       width: 100%;
+    }
+}
+
+.button-group{
+    display: flex;
+    & .btn + .btn{
+       margin-left: 1rem;
+    }
+}

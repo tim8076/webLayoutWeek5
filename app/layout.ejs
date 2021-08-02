@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%- title %></title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/style/all.css">
+</head>
+
+<body>
+  <div class="dashboard container d-flex">
+    <header class="header d-flex flex-column mh-100vh py-8 bg-gray-100">
+      <h1 class="px-8">
+        <a href="index.html"
+           class="header__logo text-hide mb-8">
+           ANSWER
+        </a>
+      </h1>
+      <nav>
+        <ul class="fw-bold">
+          <li class="header__link mb-5 px-8">
+            <a href="#"
+               class="py-1 d-flex align-items-center">
+              <span class="material-icons d-block mr-4">
+                assessment
+              </span>
+              Dashboard
+            </a>
+          </li>
+          <li class="header__link mb-5 px-8">
+            <a href="#" class="py-1 d-flex align-items-center">
+              <span class="material-icons d-block mr-4">
+                question_answer
+              </span>
+              Question
+            </a>
+          </li>
+          <li class="header__link mb-5 px-8">
+            <a href="index.html" class="py-1 d-flex align-items-center">
+              <span class="material-icons d-block mr-4">
+                assignment
+              </span>
+              Assignment
+            </a>
+          </li>
+          <li class="header__link mb-5 px-8">
+            <a href="#" class="py-1 d-flex align-items-center">
+              <span class="material-icons d-block mr-4">
+                video_library
+              </span>
+              Course
+            </a>
+          </li>
+          <li class="header__link mb-5 px-8">
+            <a href="admin.html" class="py-1 d-flex align-items-center">
+              <span class="material-icons d-block mr-4">
+                people
+              </span>
+              Admin
+            </a>
+          </li>
+          <li class="header__link mb-5 px-8">
+            <a href="#" class="py-1 d-flex align-items-center">
+              <span class="material-icons d-block mr-4">
+                settings
+              </span>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__user px-8 d-flex align-items-center mt-auto">
+        <img src="assets/images/content1.jpg"
+             class="image mr-4"
+             alt="user-image">
+        <div class="txt">
+          <p class="name fw-bold">Andy Chen</p>
+          <a href="mailto:andy0401@mail.com" 
+             class="email text-gray-600 fs-4">
+             andy0401@mail.com
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main p-8">
+      <%- contents %>
+    </main>
+  </div>
+<script src="./assets/js/vendors.js"></script>
+<script src="assets/js/all.js"></script>
+</body>
+</html>

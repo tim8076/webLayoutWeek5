@@ -1,0 +1,19 @@
+
+.modal-title{
+    font-size: 1.5rem;
+}
+.modal-input,
+.modal-select{
+    width: 100%;
+    &--display{
+       border: none;
+       outline: none;
+    }
+}
+.modal-select{
+    border: 1px solid $color-gray-900;
+    padding: 1rem;
+}
+.modal-body{
+    padding: 2rem;
+}

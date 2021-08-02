@@ -1,0 +1,213 @@
+---
+title: 首頁
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+
+<div>
+  <nav class="nav mb-8">
+    <h2 class="nav__title mr-11">Assignment</h2>
+    <select name="course">
+      <option value="All Courses">All Courses</option>
+      <option value="HTML">HTML</option>
+      <option value="CSS">CSS</option>
+      <option value="JS">JS</option>
+    </select>
+    <div class="icons d-flex justify-content-center align-items-center ml-auto">
+      <div class=" mr-6">
+          <input type="search" name="search" id="search">
+          <label for="search">
+            <span class="material-icons">
+              search
+            </span>
+          </label>
+      </div>
+      <a href="#">
+        <span class="material-icons">
+          notifications_active
+        </span>
+      </a>
+    </div>
+  </nav>
+  <div class="assignments d-flex justify-content-between">
+    <div class="assignments__list">
+      <div class="d-flex align-items-center mb-1">
+        <p class="fw-bold">All (4)</p>
+        <a href="#" class="ml-2">
+          <span class="material-icons text-primary d-block">
+            expand_more
+          </span>
+        </a>
+      </div>
+      <ul class="list-group">
+        <li class="list-group__item active">
+          <h4 class="fs-5 d-flex align-items-center mb-1">Chapter Assignment 2
+             <span class="fw-normal  ml-auto">4 hrs ago</span>
+          </h4>
+          <h3 class="d-flex align-items-center fw-bold">Please check this file…
+              <span class="fw-normal fs-5 ml-auto text-gray-600">Emily Wang</span>
+          </h3>
+        </li>
+        <li class="list-group__item ">
+            <h4 class="fs-5 d-flex align-items-center mb-1">Chapter Assignment 1
+               <span class="fw-normal  ml-auto">12 hrs ago</span>
+            </h4>
+            <h3 class="d-flex align-items-center fw-bold">My Homework
+              <span class="fw-normal fs-5 ml-auto text-gray-600">David Xu</span>
+            </h3>
+        </li>
+        <li class="list-group__item">
+            <h4 class="fs-5 d-flex align-items-center mb-1">Final Assignment
+              <span class="fw-normal  ml-auto">18 hrs ago</span>
+            </h4>
+            <h3 class="d-flex align-items-center fw-bold">Have a problem with this…
+              <span class="fw-normal fs-5 ml-auto text-gray-600">Tony Wei</span>
+            </h3>
+        </li>
+        <li class="list-group__item">
+            <h4 class="fs-5 d-flex align-items-center mb-1">Final Assignment
+            <span class="fw-normal  ml-auto">19 hrs ago</span>
+            </h4>
+            <h3 class="d-flex align-items-center fw-bold">Did I do it right?
+              <span class="fw-normal fs-5 ml-auto text-gray-600">Christina Lin</span>
+            </h3>
+        </li>
+      </ul>
+    </div>
+    <div class="assignments__content">
+        <p class="fs-5 lh-lg mb-1 text-right text-gray-600">2 comments</p>
+        <div class="content mb-4">
+           <div class="content__header px-4 py-3 bg-gray-100">
+              <h4 class="fs-5 mb-1">
+                  Chapter Assignment 2 / HTML&CSS
+              </h4>
+              <h3 class="fw-bold">
+                  Please check this file for me, thanks!
+              </h3>
+              <a href="#">
+                <span class="material-icons icon">
+                  more_vert
+                </span>
+              </a>
+            </div>
+            <div class="content__body">
+                <ul>
+                  <li class="content__item d-flex mb-4">
+                    <img class="content__image" src="assets/images/content2.jpg" alt="">
+                    <div class="text ml-2 pb-4">
+                      <h3 class="fw-bold mb-1">Emily Wang</h3>
+                      <h4 class="text-gray-600 fs-5 mb-4 ">10:38 AM (4 hours ago)</h4>
+                      <p class="fs-4 mb-4">
+                        Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the
+                        height of the <span class="code-text">div</span> is bigger than the height of the img ? There is a gap below the image, but it doesn’t seems to be a
+                        padding/margin. <br>What is the gap or extra space below image?
+                      </p>
+                      <input type="file" value="HW-2-David.zip" placeholder="HW-2-David.zip">
+                    </div>
+                  </li>
+                  <li class="content__item d-flex ">
+                    <img class="content__image" src="assets/images/content1.jpg" alt="">
+                    <div class="text ml-2">
+                      <h3 class="fw-bold mb-1">Andy Chen (You)</h3>
+                      <h4 class="text-gray-600 fs-5 mb-4 ">13:24 AM (1 hours ago)</h4>
+                      <div class="icons d-flex">
+                          <a href="#">
+                            <span class="material-icons-outlined">
+                              star_border
+                            </span>
+                          </a>
+                          <a href="#">
+                            <span class="material-icons ml-6">
+                              edit
+                            </span>
+                          </a>   
+                      </div>
+                      <p class="fs-4">
+                        Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on.
+                        There is space below that line for the descenders you find on letters like g, j, p and q.
+                        <br>
+                        You can
+                        <br>
+                        <ol class="content__list">
+                          <li>• adjust the <span class="code-text">vertical-align</span>
+                             of the image to position it elsewhere (e.g. the <span class="code-text">middle</span> ) or</li>
+                          <li>• change the <span class="code-text">display</span> so it isn’t inline.</li>
+                        </ol>
+                      </p>    
+                    </div>
+                    <form action="index.html" method="POST" class="reply-area">
+                        <div class="tool-bar d-flex align-items-center bg-gray-100">
+                            <select class="fw-bold">
+                               <option value="Body Text">Body Text</option>
+                               <option value="Serif">Serif</option>
+                               <option value="Sans-serif">Sans-serif</option>
+                            </select>
+                            <a href="#" class="ml-6">
+                              <span class="material-icons">
+                                format_bold
+                              </span>
+                            </a>
+                            <a href="#" class="ml-6">
+                              <span class="material-icons">
+                                format_italic
+                              </span>
+                            </a>
+                            <a href="#" class="ml-6">
+                              <span class="material-icons">
+                                format_list_bulleted
+                              </span>
+                            </a>
+                            <a href="#" class="ml-6">
+                              <span class="material-icons">
+                                format_list_numbered
+                              </span>
+                            </a>
+                            <a href="#" class="ml-6">
+                              <span class="material-icons">
+                                image
+                              </span>
+                            </a>
+                            <a href="#" class="ml-6">
+                              <span class="material-icons">
+                                code
+                              </span>
+                            </a>
+                        </div>
+                        <div class="content py-4 px-6">
+                            <textarea name="reply"
+                                      placeholder="Reply an answer…"
+                                      cols="30" 
+                                      rows="10">
+                            </textarea>
+                            <div class="button-group justify-content-end">
+                              <input type="button" class="btn btn--outline--primary js-cancel" value="Cancel">
+                              <input type="button" class="btn btn--primary" value="Reply">
+                            </div>
+                        </div>
+                    </form>
+                  </li>
+                </ul>
+            </div>
+        </div>
+        <div class="reply-row d-flex justify-content-between align-items-center">
+          <div class="d-flex">
+              <a href="#">
+                <span class="material-icons">
+                  chevron_left
+                </span>
+              </a>
+              <a href="#" class="ml-6">
+                <span class="material-icons">
+                  navigate_next
+                </span>
+              </a>
+          </div>
+          <div class="button-group">
+             <input type="button" class="btn btn--outline--primary" value="Mark as read">
+             <input type="button" class="btn btn--primary js-reply" value="Reply">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

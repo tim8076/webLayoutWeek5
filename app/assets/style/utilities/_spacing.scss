@@ -1,0 +1,49 @@
+
+@each $level, $value in $spacers {
+    .m-#{$level} {
+        margin: $value !important; 
+    }
+    .mt-#{$level} {
+        margin-top: $value !important; 
+    }
+    .mb-#{$level} {
+        margin-bottom: $value !important; 
+    }
+    .mr-#{$level} {
+        margin-right: $value !important; 
+    }
+    .ml-#{$level} {
+        margin-left: $value !important; 
+    }
+    .mx-#{$level} {
+        margin-right: $value !important; 
+        margin-left: $value !important; 
+    }
+    .my-#{$level} {
+        margin-top: $value !important; 
+        margin-bottom: $value !important; 
+    }
+    .p-#{$level} {
+        padding: $value !important; 
+    }
+    .pt-#{$level} {
+        padding-top: $value !important; 
+    }
+    .pb-#{$level} {
+        padding-bottom: $value !important; 
+    }
+    .pr-#{$level} {
+        padding-right: $value !important; 
+    }
+    .pl-#{$level} {
+        padding-left: $value !important; 
+    }
+    .px-#{$level} {
+        padding-right: $value !important; 
+        padding-left: $value !important;
+    }
+    .py-#{$level} {
+        padding-top: $value !important; 
+        padding-bottom: $value !important;
+    }
+} 

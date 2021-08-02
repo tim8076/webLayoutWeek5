@@ -1,0 +1,248 @@
+---
+title: Admin
+layout: ./app/layout.ejs
+engine: ejs
+current: index
+---
+<div>
+    <nav class="nav mb-8 fw-bold">
+        <h2 class="nav__title mr-11">Admin</h2>
+        <a href="#" class="d-flex align-items-center"
+           data-bs-toggle="modal" data-bs-target="#addModal">
+            <span class="material-icons-outlined text-primary mr-2">
+                add
+            </span>
+            Add New Admin
+        <div class="icons d-flex justify-content-center align-items-center ml-auto">
+            <div class=" mr-6">
+                <input type="search" name="search" id="search">
+                <label for="search">
+                    <span class="material-icons">
+                        search
+                    </span>
+                </label>
+            </div>
+            <a href="#">
+                <span class="material-icons">
+                    notifications_active
+                </span>
+            </a>
+        </div>
+    </nav>
+    <table class="table mb-13">
+        <thead>
+            <tr class="text-left fw-bold">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Verified</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        <!-- 表格內容由 admin.js產生 -->
+        </tbody>
+    </table>
+    <nav class="pagination d-flex justify-content-end">
+        <ul class="pagination__list">
+            <li>
+                <a href="#" class="page-link pre">
+                    <span class="material-icons d-block">
+                        chevron_left
+                    </span>
+                </a>
+            </li>
+            <li><a href="#" class="page-link page active">1</a></li>
+            <li><a href="#" class="page-link page">2</a></li>
+            <li><a href="#" class="page-link page">3</a></li>
+            <li>
+                <a href="#" class="page-link next">
+                    <span class="material-icons d-block">
+                        navigate_next
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">Edit Admin</h5>
+                    <a href="#" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="material-icons-outlined">
+                            clear
+                        </span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <h5 class="fs-2 fw-bold mb-4">Account</h5>
+                    <div class="mb-4">
+                        <label for="modal-name" class="fs-4 mb-1">Name</label>
+                        <input type="text" id="modal-name" value="Emir Wicks"
+                               class="modal-input modal-input--display d-block p-4 bg-gray-100">
+                    </div>
+                    <div class="mb-4">
+                        <label for="modal-email" class="fs-4 mb-1">Email</label>
+                        <input type="text" id="modal-email" value="emir.wicks@mail.com" 
+                               class="modal-input modal-input--display d-block p-4 bg-gray-100">
+                    </div>
+                    <hr class="bg-gray-100">
+                    <h5 class="fs-2 fw-bold my-4">Verification</h5>
+                    <div class="d-flex justify-content-between mb-4">
+                        <p class="d-flex align-items-center">
+                            <span class="material-icons text-primary mr-2">
+                                check_circle
+                            </span>
+                            Verified
+                        </p>
+                        <p class="fs-4">2020/4/12</p>
+                    </div>
+                    <button type="button" class="btn btn--disabled btn--full mb-4">
+                        Send Verification Mail
+                    </button>
+                    <hr class="bg-gray-100">
+                    <h5 class="fs-2 fw-bold my-4">Access Level</h5>
+                    <select id="" class="modal-select mb-4">
+                       <option value="Admin">Admin</option>
+                       <option value="Front">Front</option>
+                       <option value="None">None</option>
+                    </select>
+                    <hr class="bg-gray-100">
+                    <h5 class="fs-2 fw-bold my-4">Custom Access</h5>
+                    <div class="d-flex align-items-center mb-4">
+                        <input type="checkbox" id="lecture" class="mr-2">
+                        <label for="lecture">lecture</label>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <input type="checkbox" id="coupon" class="mr-2">
+                        <label for="coupon">coupon</label>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <input type="checkbox" id="message" class="mr-2">
+                        <label for="message">message</label>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <input type="checkbox" id="Setting" class="mr-2">
+                        <label for="Setting">Setting</label>
+                    </div>
+                    <div class="d-flex align-items-center mb-4">
+                        <input type="checkbox" id="task menu" class="mr-2">
+                        <label for="task menu">task menu</label>
+                    </div>
+                    <hr class="bg-gray-100">
+                    <h5 class="fs-2 fw-bold my-4">Deactivate Account</h5>
+                    <p class="text-danger d-flex align-items-center mb-4">
+                        <span class="material-icons mr-2">
+                            warning
+                        </span>
+                        This cannot be undone!
+                    </p>
+                    <button type="button" class="btn btn--full btn--danger">Deactivate This Account</button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn--outline--primary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="button" class="btn btn--primary">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="exampleModalLabel">Add Admin</h5>
+                    <a href="#" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="material-icons-outlined">
+                            clear
+                        </span>
+                    </a>
+                </div>
+                <div class="modal-body">
+                    <form id="modalAddForm">
+                        <h5 class="fs-2 fw-bold mb-4">Account</h5>
+                        <div class="mb-4">
+                            <label for="modalNameAdd" class="fs-4 mb-1">Name</label>
+                            <input type="text" data-type="name" id="modalNameAdd" class="modal-input d-block p-4">
+                        </div>
+                        <div class="mb-4">
+                            <label for="modalEmailAdd" class="fs-4 mb-1">Email</label>
+                            <input type="text" data-type="email" id="modalEmailAdd" class="modal-input d-block p-4">
+                        </div>
+                        <hr class="bg-gray-100">
+                        <h5 class="fs-2 fw-bold my-4">Verification</h5>
+                        <div class="d-flex justify-content-between mb-4">
+                            <p class="d-flex align-items-center">
+                                <span class="material-icons text-danger mr-1">
+                                    warning
+                                </span>
+                                unverified
+                            </p>
+                            <p class="fs-4">2020/4/12</p>
+                        </div>
+                        <button type="button" class="btn btn--gray btn--full mb-4">
+                            Send Verification Mail
+                        </button>
+                        <hr class="bg-gray-100">
+                        <h5 class="fs-2 fw-bold my-4">Access Level</h5>
+                        <select id="modalSelectLevel" data-type="level" class="modal-select mb-4">
+                            <option value="Admin">Admin</option>
+                            <option value="Front">Front</option>
+                            <option value="None">None</option>
+                        </select>
+                        <hr class="bg-gray-100">
+                        <h5 class="fs-2 fw-bold my-4">Custom Access</h5>
+                        <div class="d-flex align-items-center mb-4">
+                            <input type="checkbox"
+                                   name="lecture"
+                                   data-type="lecture" 
+                                   id="lecture1" 
+                                   class="mr-2">
+                            <label for="lecture1">lecture</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <input type="checkbox"
+                                   name="coupon"
+                                   data-type="coupon" 
+                                   id="coupon1" 
+                                   class="mr-2">
+                            <label for="coupon1">coupon</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <input type="checkbox"
+                                   name="message"
+                                   data-type="message" 
+                                   id="message1" 
+                                   class="mr-2">
+                            <label for="message1">message</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <input type="checkbox"
+                                   name="setting"
+                                   data-type="setting" 
+                                   id="Setting1" 
+                                   class="mr-2">
+                            <label for="Setting1">Setting</label>
+                        </div>
+                        <div class="d-flex align-items-center mb-4">
+                            <input type="checkbox"
+                                   name="taskMeun"
+                                   data-type="taskMeun" 
+                                   id="taskMenu1" 
+                                   class="mr-2">
+                            <label for="taskMenu1">task menu</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn--outline--primary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+                    <button type="button" class="btn btn--primary js-addAdmin">Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
